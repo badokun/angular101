@@ -1,4 +1,4 @@
-<div class="container theme-showcase" >
+<div class="container theme-showcase">
   <div class="row">
     <div class="col-sm-4">
       <div class="panel panel-default">
@@ -6,10 +6,11 @@
           <h3 class="panel-title">Search Criteria</h3>
         </div>
         <form class="panel-body" ng-submit="search(username)">
-          <input class="span2" required type="text" placeholder="Enter usename" ng-model="username" />
-          <input type="submit" value="Search" class="btn btn-primary btn-large" />
+          <div class="form-group">
+            <input class="form-control" required type="text" placeholder="Enter usename" ng-model="username" />
+          </div>
+          <input type="submit" value="Search" class="btn btn-primary" />
         </form>
-
       </div>
     </div>
   </div>

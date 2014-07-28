@@ -10,14 +10,14 @@
      }
 
      var getUser = function(username) {
-       var apiUrl = "http://api.github.com/users/" + username;
+       var apiUrl = "https://api.github.com/users/" + username;
        $log.info("Calling Api - " + apiUrl);
        return $http.get(apiUrl)
          .then(onUserComplete);
      };
 
      var getRepos = function(username) {
-       var apiUrl = "http://api.github.com/users/" + username + "/repos";
+       var apiUrl = "https://api.github.com/users/" + username + "/repos";
        $log.info("Calling Api - " + apiUrl);
        return $http.get(apiUrl)
          .then(onReposComplete);

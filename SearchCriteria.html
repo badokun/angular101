@@ -1,0 +1,24 @@
+
+
+  <div class="container theme-showcase" role="main">
+    <div class="page-header">
+      <h1>Angular 101</h1>
+    </div>
+    <div class="row" ng-controller="SearchController">
+      <div class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Search Criteria</h3>
+          </div>
+
+
+          <form class="panel-body" ng-submit="search(username)">
+            <input class="span2" required type="text" placeholder="Enter usename" ng-model="username" />
+            <input type="submit" value="Search" class="btn btn-primary btn-large" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

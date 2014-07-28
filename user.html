@@ -1,18 +1,23 @@
-<div class="col-sm-4">
+<div class="col-sm-8">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Search Results</h3>
-      <div class="panel-body">
-        <div>
-          {{user.name}}
-        </div>
-       <div ng-show="error">
+      <div class="panel-body" ng-show="repos">
+        <h3>
+          Name: {{user.name}}
+        </h3>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="repo in repos">
+            <span class="badge">{{repo.id}}</span>
+            <a href="{{repo.html_url}}">{{repo.name}} ({{repo.language}})</a>
+          </li>
+        </ul>
+      </div>
+      <div ng-show="error">
           {{error}}
         </div>
-      </div>
       <a href="#/main">Back to search</a>
     </div>
   </div>
 </div>
 
- 

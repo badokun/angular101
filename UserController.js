@@ -2,14 +2,23 @@
 
   var UserController = function($scope, $log, github, $routeParams) {
 
-    var onUserComplete = function(data) {
+var onReposComplete = function(repos){
+  $log.info("Api call returned all the repos");
+  $scope.repos = repos.data;
+}
+
+    var onUserComplete = function(user) {
       $log.info("Api call returned");
-      $scope.user = data;
+      if (angular.isUndefined(user.name)){
+        $scope.user = { name : "Not set on GitHub" }
+      }
+      else { $scope.user = user;}
+        github.getRepos(user.login).then(onReposComplete, onError);
     }
 
-    var onError = function(error) {
-      $scope.error = error.data.message;
-      $log.info("Api returned an error - " + error.data.message);
+    var onError = function(reason) {
+      $scope.error = reason.data.message;
+      $log.info("Api returned an error - " + reason.data.message);
     }
 
     var username = $routeParams.username;
@@ -19,6 +28,4 @@
 
   var app = angular.module("githubViewer");
   app.controller("UserController", ["$scope", "$log", "github", "$routeParams", UserController]);
-
-
 }());

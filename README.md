@@ -3,7 +3,7 @@ angular101
 
 making a change on the development branch
 
-Available at http://firstworkspace-c9-badokun.c9.io/
+Available at http://firstworkspace-c9-badokun.c9.io/angular101/
 
 Stylesheet from http://bootswatch.com/darkly/
 

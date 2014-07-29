@@ -1,1 +1,6 @@
+GitFlow workflow
+Release version: initial
+
+
+************************
 pre1.3 with 1.2.2 Hotfix

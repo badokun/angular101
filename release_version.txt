@@ -1,5 +1,5 @@
 GitFlow workflow
-Release version: initial
+Release version: 2.0
 
 
 ************************
